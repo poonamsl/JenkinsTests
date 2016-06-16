@@ -18,8 +18,9 @@ desired_cap = {
 }
 #'version': "31",
 
+myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
-	command_executor='http://parora:4d64c46e-2f21-409c-b04d-3dd61805d8a0@ondemand.saucelabs.com:80/wd/hub',desired_capabilities=desired_cap)
+	command_executor=myUrl,desired_capabilities=desired_cap)
 
 # This is your test logic. You can add multiple tests here.
 driver.implicitly_wait(10)

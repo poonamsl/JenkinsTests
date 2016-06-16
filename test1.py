@@ -8,9 +8,6 @@ import os
 SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
 SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 
-#SAUCE_USERNAME = "Saucy04"
-#SAUCE_ACCESS_KEY = "b317d9ca-1dbc-47e6-8b21-59dc09a65a0b"
-
 sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
@@ -21,8 +18,9 @@ desired_cap = {
 }
 #'version': "31",
 
+myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
-	command_executor='http://parora:4d64c46e-2f21-409c-b04d-3dd61805d8a0@ondemand.saucelabs.com:80/wd/hub',desired_capabilities=desired_cap)
+	command_executor=myUrl,desired_capabilities=desired_cap)
 
 #driver = webdriver.Remote (
 #	command_executor='http://Saucy04:b317d9ca-1dbc-47e6-8b21-59dc09a65a0b@ondemand.saucelabs.com:80/wd/hub',desired_capabilities=desired_cap)
