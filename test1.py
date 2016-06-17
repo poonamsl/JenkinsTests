@@ -7,8 +7,8 @@ import os
 # Retrieving environment variables
 SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
 SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
-SELENIUM_PLATFORM = "OS X 10.11"
-SELENIUM_BROWSER = "chrome"
+#SELENIUM_PLATFORM = "OS X 10.11"
+#SELENIUM_BROWSER = "chrome"
 
 sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
@@ -22,8 +22,8 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 #'version': "31",
 
 desired_cap = {}
-desired_cap['platform'] = SELENIUM_PLATFORM
-desired_cap['browserName'] = SELENIUM_BROWSER
+desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
+desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
 desired_cap['name'] = 'test1'
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
