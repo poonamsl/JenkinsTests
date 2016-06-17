@@ -15,6 +15,7 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 desired_cap = {
 	'platform': "Mac OS X 10.9",
 	'browserName': "chrome",
+	'name':'test1',
 }
 #'version': "31",
 

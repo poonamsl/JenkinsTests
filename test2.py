@@ -15,6 +15,7 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 desired_cap = {
 	'platform': "Windows 10",
 	'browserName': "firefox",
+	'name':'test2'
 }
 #'version': "31",
 
