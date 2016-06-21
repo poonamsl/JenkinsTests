@@ -1,3 +1,3 @@
 # JenkinsTests
-[![Sauce Test Status](https://saucelabs.com/buildstatus/YOUR_SAUCE_USERNAME)](https://saucelabs.com/u/parora)
+[![Sauce Test Status](https://saucelabs.com/buildstatus/parora)](https://saucelabs.com/u/parora)
 
