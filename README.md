@@ -3,3 +3,5 @@
 
 [![Sauce Build Matrix](https://saucelabs.com/browser-matrix/parora)](https://saucelabs.com/u/parora.svg)
 
+[![Sauce Build Matrix](https://saucelabs.com/browser-matrix/parora.svg)](https://saucelabs.com/u/parora)
+
