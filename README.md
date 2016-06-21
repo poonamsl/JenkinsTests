@@ -1,6 +1,3 @@
 
-
-# Browser Matrix
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/parora.svg)](https://saucelabs.com/u/parora?auth=HMAC_TOKEN)
-
-[!Sauce Asset Management](https://saucelabs.com/open_sauce/build_status/asset_management.svg/parora?auth=HMAC_TOKEN)](https://saucelabs.com/u/parora?auth=HMAC_TOKEN))]
+# JenkinsTests
+[![Sauce Test Status](https://saucelabs.com/buildstatus/parora?auth=HMAC_TOKEN)](https://saucelabs.com/u/parora?auth=HMAC_TOKEN)
