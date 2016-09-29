@@ -8,3 +8,8 @@
 [![Sauce Test Status](https://saucelabs.com/open_sauce/build_status/parora.svg?saucy)](https://saucelabs.com/u/parora)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/parora.svg)](https://saucelabs.com/u/parora)
+
+[![Browser Matrix](https://saucelabs.com/browser-matrix/parora.svg?auth=d217b9fcc474bb973eaef82060f4b852)](https://saucelabs.com/beta/dashboard/builds)
+
+[![Docs Wiki-Sauce Test Status](https://saucelabs.com/buildstatus/parora)](https://saucelabs.com/u/parora)
+
