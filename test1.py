@@ -26,6 +26,7 @@ desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
 desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
 desired_cap['name'] = 'test1'
 desired_cap['build'] = 'mybuild'
+desired_cap['public'] = 'public'
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
