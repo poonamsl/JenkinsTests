@@ -15,19 +15,20 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
-#desired_cap = {
-#	'platform': "Mac OS X 10.9",
-#	'browserName': "chrome",
-#	'name':'test1',
-#}
+desired_cap = {
+	'platform': "Mac OS X 10.9",
+	'browserName': "chrome",
+	'name':'test1',
+	'version': "latest",
+}
 #'version': "31",
 
-desired_cap = {}
-desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
-desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
-desired_cap['name'] = 'test1'
-desired_cap['build'] = 'mybuild'
-desired_cap['public'] = 'public restricted'
+#desired_cap = {}
+#desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
+#desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
+#desired_cap['name'] = 'test1'
+#desired_cap['build'] = 'mybuild'
+#desired_cap['public'] = 'public restricted'
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
