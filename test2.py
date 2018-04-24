@@ -39,7 +39,7 @@ print driver.title
 
 #print driver.session_id
 
-print "SauceOnDemandSessionID=" + driver.session_id + "job-name=test2"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test2"
 
 driver.execute_script("sauce:job-result=passed")
 
