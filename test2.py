@@ -37,7 +37,9 @@ elem.send_keys("Selenium")
 elem.submit()
 print driver.title
 
-print driver.session_id
+#print driver.session_id
+
+print "SauceOnDemandSessionID=" + driver.session_id + "test2"
 
 driver.execute_script("sauce:job-result=passed")
 
