@@ -55,7 +55,7 @@ print driver.title
 
 #driver.execute_script("sauce: break")
 #print driver.session_id
-print "SauceOnDemandSessionID=" + driver.session_id + "test1"
+print "SauceOnDemandSessionID=" + driver.session_id + "job-name=test1"
 
 driver.execute_script("sauce:job-result=passed")
 
