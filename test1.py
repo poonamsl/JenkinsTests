@@ -48,7 +48,7 @@ if not "Google" in driver.title:
 elem = driver.find_element_by_name("q")
 elem.send_keys("Sauce Labs")
 elem.submit()
-print driver.title
+#print driver.title
 
 # Insert a break point to take manual control of the browser 
 # through the test's live window
