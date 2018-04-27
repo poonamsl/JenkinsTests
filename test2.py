@@ -35,7 +35,7 @@ if not "Google" in driver.title:
 elem = driver.find_element_by_name("q")
 elem.send_keys("Selenium")
 elem.submit()
-print driver.title
+#print driver.title
 
 #print driver.session_id
 
