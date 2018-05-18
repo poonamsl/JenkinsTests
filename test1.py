@@ -34,10 +34,6 @@ myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucela
 driver = webdriver.Remote (
 	command_executor=myUrl,desired_capabilities=desired_cap)
 
-#driver = webdriver.Remote (
-#	command_executor='http://Saucy04:b317d9ca-1dbc-47e6-8b21-59dc09a65a0b@ondemand.saucelabs.com:80/wd/hub',desired_capabilities=desired_cap)
-
-
 # This is your test logic. You can add multiple tests here.
 driver.implicitly_wait(10)
 driver.get("http://www.google.com")
@@ -57,6 +53,8 @@ elem.submit()
 #print driver.session_id
 print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test1"
 print "SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS')
+print "Platform " + os.environ.get('SELENIUM_PLATFORM')
+print "Browser" + os.environ.get('SELENIUM_BROWSER')
 
 driver.execute_script("sauce:job-result=passed")
 
