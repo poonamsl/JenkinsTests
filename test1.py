@@ -28,7 +28,7 @@ desired_cap = {}
 desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
 desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
 desired_cap['name'] = 'test1'
-desirec_cap['version'] = os.environ.get('SELENIUM_VERSION')
+desired_cap['version'] = os.environ.get('SELENIUM_VERSION')
 #desired_cap['build'] = 'mybuild'
 #desired_cap['public'] = 'public restricted'
 
