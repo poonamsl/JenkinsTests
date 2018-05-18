@@ -25,12 +25,17 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 #SELENIUM_PLATFORM, SELENIUM_VERSION, and SELENIUM_BROWSER 
 desired_cap = {}
-desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
+platform = os.environ.get('SELENIUM_PLATFORM')
+if platform == "android"
+	desired_cap['deviceName'] = os.environ.get('SELENIUM_DEVICE')
+else
+	desired_cap['platform'] = platform
 desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
 desired_cap['name'] = 'test1'
 desired_cap['version'] = os.environ.get('SELENIUM_VERSION')
 #desired_cap['build'] = 'mybuild'
 #desired_cap['public'] = 'public restricted'
+
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
