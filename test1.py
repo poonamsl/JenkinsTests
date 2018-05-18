@@ -25,7 +25,8 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 #SELENIUM_PLATFORM, SELENIUM_VERSION, and SELENIUM_BROWSER 
 desired_cap = {}
-print "deviceType: " + os.environ.get('SELENIUM_DEVICE_TYPE')
+deviceType = os.environ.get('SELENIUM_DEVICE_TYPE')
+print deviceType
 platform = os.environ.get('SELENIUM_PLATFORM')
 if platform == "android":
 	desired_cap['deviceName'] = os.environ.get('SELENIUM_DEVICE')
