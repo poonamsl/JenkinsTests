@@ -15,18 +15,20 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
-desired_cap = {
-	'platform': "Mac OS X 10.9",
-	'browserName': "chrome",
-	'name':'test1',
-	'version': "latest",
-}
+#desired_cap = {
+#	'platform': "Mac OS X 10.9",
+#	'browserName': "chrome",
+#	'name':'test1',
+#	'version': "latest",
+#}
 #'version': "31",
 
-#desired_cap = {}
-#desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
-#desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
-#desired_cap['name'] = 'test1'
+#SELENIUM_PLATFORM, SELENIUM_VERSION, and SELENIUM_BROWSER 
+desired_cap = {}
+desired_cap['platform'] = os.environ.get('SELENIUM_PLATFORM')
+desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
+desired_cap['name'] = 'test1'
+desirec_cap['version'] = os.environ.get('SELENIUM_VERSION')
 #desired_cap['build'] = 'mybuild'
 #desired_cap['public'] = 'public restricted'
 
@@ -55,7 +57,7 @@ print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test1"
 #print "SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS')
 #print "Platform " + os.environ.get('SELENIUM_PLATFORM')
 #print "Browser" + os.environ.get('SELENIUM_BROWSER')
-printenv
+#printenv
 
 driver.execute_script("sauce:job-result=passed")
 
