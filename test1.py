@@ -56,6 +56,7 @@ elem.submit()
 #driver.execute_script("sauce: break")
 #print driver.session_id
 print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test1"
+print "SauceOnDemandBrowsers=" + $SAUCE_ONDEMAND_BROWSERS
 
 driver.execute_script("sauce:job-result=passed")
 
