@@ -15,27 +15,27 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
-#desired_cap = {
-#	'platform': "Mac OS X 10.9",
-#	'browserName': "chrome",
-#	'name':'test1',
-#	'version': "latest",
-#}
+desired_cap = {
+	'platform': "Mac OS X 10.9",
+	'browserName': "chrome",
+	'name':'test1',
+	'version': "latest",
+}
 #'version': "31",
 
 #SELENIUM_PLATFORM, SELENIUM_VERSION, and SELENIUM_BROWSER 
-desired_cap = {}
-deviceType = os.environ.get('SELENIUM_DEVICE_TYPE')
-print "abc"
-print deviceType
-platform = os.environ.get('SELENIUM_PLATFORM')
-if platform == "android":
-	desired_cap['deviceName'] = os.environ.get('SELENIUM_DEVICE')
-else:
-	desired_cap['platform'] = platform
-desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
-desired_cap['name'] = 'test1'
-desired_cap['version'] = os.environ.get('SELENIUM_VERSION')
+#desired_cap = {}
+#deviceType = os.environ.get('SELENIUM_DEVICE_TYPE')
+#print "abc"
+#print deviceType
+#platform = os.environ.get('SELENIUM_PLATFORM')
+#if platform == "android":
+#	desired_cap['deviceName'] = os.environ.get('SELENIUM_DEVICE')
+#else:
+#	desired_cap['platform'] = platform
+#desired_cap['browserName'] = os.environ.get('SELENIUM_BROWSER')
+#desired_cap['name'] = 'test1'
+#desired_cap['version'] = os.environ.get('SELENIUM_VERSION')
 #desired_cap['build'] = 'mybuild'
 #desired_cap['public'] = 'public restricted'
 
