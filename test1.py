@@ -62,7 +62,7 @@ elem.submit()
 #driver.execute_script("sauce: break")
 #print driver.session_id
 print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test1"
-print "SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS')
+#print "SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS')
 #print "Platform " + os.environ.get('SELENIUM_PLATFORM')
 #print "Browser" + os.environ.get('SELENIUM_BROWSER')
 #printenv
