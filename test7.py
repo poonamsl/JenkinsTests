@@ -26,7 +26,7 @@ for i in range(num):
 		'browserName': currentCaps['browser'],
 		'version': currentCaps['browser-version'],
 		'name':'test7',
-		'public':'public'
+		'public':'public',
 		'build':'daily_build #10'
 	}
 
