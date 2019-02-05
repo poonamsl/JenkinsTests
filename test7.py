@@ -27,7 +27,7 @@ for i in range(num):
 		'version': currentCaps['browser-version'],
 		'name':'test7',
 		'public':'public',
-		'build':'daily_build #10'
+		'build':'jenkins-daily_build-10'
 	}
 
 	driver = webdriver.Remote(command_executor=myUrl,desired_capabilities=desired_cap)
