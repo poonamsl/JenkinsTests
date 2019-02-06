@@ -13,6 +13,7 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 
 SauceOnDemandBrowsers_String = os.environ.get('SAUCE_ONDEMAND_BROWSERS')
+print "Build name is " + os.environ.get('JENKINS_BUILD_NUMBER')
 parsed_json = json.loads(SauceOnDemandBrowsers_String)
 
 num = len(parsed_json)
