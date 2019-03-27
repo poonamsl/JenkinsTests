@@ -33,6 +33,7 @@ for i in range(num):
 
 	driver = webdriver.Remote(command_executor=myUrl,desired_capabilities=desired_cap)
 	driver.get("http://www.google.com")
+	print desired_cap
 	print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test7"
 	driver.quit()
 	sauce_client.jobs.update_job(driver.session_id, passed=True)
