@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import sauceclient
+#import sauceclient
 import os
 import json
 
@@ -9,7 +9,7 @@ import json
 SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
 SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 
-sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
+#sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 
 SauceOnDemandBrowsers_String = os.environ.get('SAUCE_ONDEMAND_BROWSERS')
@@ -36,4 +36,4 @@ for i in range(num):
 	print desired_cap
 	print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test7"
 	driver.quit()
-	sauce_client.jobs.update_job(driver.session_id, passed=True)
+	#sauce_client.jobs.update_job(driver.session_id, passed=True)
