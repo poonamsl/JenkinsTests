@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from sauceclient import SauceClient
+#from sauceclient import SauceClient
 import os
 
 
@@ -11,7 +11,7 @@ SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 #SELENIUM_PLATFORM = "OS X 10.11"
 #SELENIUM_BROWSER = "chrome"
 
-sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
+#sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
