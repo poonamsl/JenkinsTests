@@ -13,8 +13,8 @@ sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
 desired_cap = {
-	'platform': "macOS 10.13",
-	'browserName': "firefox",
+	'platform': "Windows 10",
+	'browserName': "chrome",
 	'name':'test3',
 	'public':'public'
 }
@@ -25,23 +25,16 @@ driver = webdriver.Remote (
 	command_executor=myUrl,desired_capabilities=desired_cap)
 
 # This is your test logic. You can add multiple tests here.
-driver.implicitly_wait(10)
-driver.get("http://www.google.com")
-if not "Google" in driver.title:
-	raise Exception("Unable to load google page!")
-	driver.execute_script("sauce:job-result=failed")
-	failed = True
+driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
 	
-elem = driver.find_element_by_name("q")
-elem.send_keys("Selenium")
-elem.submit()
-#print driver.title
+elem = driver.find_element_by_xpath("//*[@id=\"view-all-personal-cards\"]/div[3]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[1]/sup")
+print elem.get_text()
 
-#print driver.session_id
+print driver.session_id
 
 print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test3"
 
-driver.execute_script("sauce:job-result=passed")
+#driver.execute_script("sauce:job-result=passed")
 
 # This is where you tell Sauce Labs to stop running tests on your behalf.
 # It's important so that you aren't billed after your test finishes
