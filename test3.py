@@ -8,7 +8,7 @@ import os
 SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
 SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 
-sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
+#sauce_client = SauceClient(SAUCE_USERNAME,SAUCE_ACCESS_KEY)
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
@@ -39,4 +39,4 @@ print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test3"
 # This is where you tell Sauce Labs to stop running tests on your behalf.
 # It's important so that you aren't billed after your test finishes
 driver.quit()
-sauce_client.jobs.update_job(driver.session_id, passed=True)
+#sauce_client.jobs.update_job(driver.session_id, passed=True)
