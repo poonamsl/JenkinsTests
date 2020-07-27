@@ -28,7 +28,7 @@ driver = webdriver.Remote (
 driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
 	
 elem = driver.find_element_by_xpath("//*[@id=\"view-all-personal-cards\"]/div[3]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[1]/sup")
-print elem.get_text()
+print elem.text
 
 print driver.session_id
 
