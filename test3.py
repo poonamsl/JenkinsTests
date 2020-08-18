@@ -32,7 +32,7 @@ print unicode(elem.text).encode("utf-8")
 
 print driver.session_id
 
-print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test3"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test30"
 
 #driver.execute_script("sauce:job-result=passed")
 
