@@ -17,6 +17,7 @@ desired_cap = {
 	'browserName': "chrome",
 	'name':'test3',
 	'public':'public'
+	'build':'mybuild'
 }
 #'version': "31",
 
@@ -27,7 +28,7 @@ driver = webdriver.Remote (
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
 
-print "SauceOnDemandSessionID=" + driver.session_id + " job-name=sanity"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test3"
 
 #driver.execute_script("sauce:job-result=passed")
 
