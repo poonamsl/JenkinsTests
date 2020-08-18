@@ -16,7 +16,7 @@ desired_cap = {
 	'platform': "Windows 10",
 	'browserName': "chrome",
 	'name':'test3',
-	'public':'public'
+	'public':'public',
 	'build':'mybuild'
 }
 #'version': "31",
