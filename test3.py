@@ -28,7 +28,7 @@ driver = webdriver.Remote (
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
 
-print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test3"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=sanity"
 
 #driver.execute_script("sauce:job-result=passed")
 
