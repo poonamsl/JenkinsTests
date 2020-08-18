@@ -25,12 +25,7 @@ driver = webdriver.Remote (
 	command_executor=myUrl,desired_capabilities=desired_cap)
 
 # This is your test logic. You can add multiple tests here.
-driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
-	
-elem = driver.find_element_by_xpath("//*[@id=\"view-all-personal-cards\"]/div[3]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[1]/sup")
-print unicode(elem.text).encode("utf-8")
-
-print driver.session_id
+driver.get("https://www.google.com")
 
 print "SauceOnDemandSessionID=" + driver.session_id + " job-name=test30"
 
