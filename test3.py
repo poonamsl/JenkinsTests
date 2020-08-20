@@ -12,18 +12,27 @@ SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 
 # The command_executor tells the test to run on Sauce, while the desired_capabilitues 
 # parameter tells us which browsers and OS to spin up
-desired_cap = {
-	'platform': "Windows 10",
-	'browserName': "chrome",
-	'name':'test3',
-	'public':'public',
-	'build':'mybuild'
-}
+#desired_cap = {
+#	'platform': "Windows 10",
+#	'browserName': "chrome",
+#	'name':'test3',
+#	'public':'public',
+#	'build':'mybuild'
+#}
 #'version': "31",
+
+caps = {
+  'browserName': 'safari',
+  'browserVersion': '13.1',
+  'platformName': 'macOS 10.15',
+  'sauce:options': {
+	  'build': os.environ.get('SAUCE_BUILD_NAME'),
+  }
+}
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
-	command_executor=myUrl,desired_capabilities=desired_cap)
+	command_executor=myUrl,capabilities=caps)
 
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
