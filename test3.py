@@ -32,7 +32,7 @@ caps = {
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
 driver = webdriver.Remote (
-	command_executor=myUrl,capabilities=caps)
+	command_executor=myUrl,desired_cap=caps)
 
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
