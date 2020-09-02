@@ -22,12 +22,9 @@ SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 #'version': "31",
 
 caps = {
-  'browserName': 'safari',
-  'browserVersion': '13.1',
-  'platformName': 'macOS 10.15',
-  'sauce:options': {
-	  'build': os.environ.get('SAUCE_BUILD_NAME'),
-  }
+  'browserName': 'Chrome',
+  'browserVersion': '80',
+  'platformName': 'Windows 10',
 }
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
@@ -37,7 +34,13 @@ driver = webdriver.Remote (
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
 
-print "[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=sanity"
+driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
+
+elem = driver.find_element_by_xpath("//*[@id=\"view-all-personal-cards\"]/div[3]/div[5]/div[1]/div/div/div[1]/div[2]/div/div[1]/sup")
+print elem.text
+print unicode(elem.text).encode("utf-8")
+
+print "[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=Special Characters Test"
 
 #driver.execute_script("sauce:job-result=passed")
 
