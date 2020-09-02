@@ -36,7 +36,7 @@ driver.get("https://www.google.com")
 
 driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
 
-elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2]//div[@class=\'title\']"")
+elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2]//div[@class=\'title\']")
 print elem.text
 print unicode(elem.text).encode("utf-8")
 
