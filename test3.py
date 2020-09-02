@@ -34,7 +34,7 @@ driver = webdriver.Remote (
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
 
-driver.get("https://www.americanexpress.com/us/credit-cards/?inav=menu_cards_pc_viewallcards")
+driver.get("https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/american-express-platinum-corporate-card?inav=menu_cards_cs_corporate_platinum_card")
 
 elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2]//div[@class=\'title\']")
 print elem.text
