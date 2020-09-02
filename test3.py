@@ -37,7 +37,7 @@ driver.get("https://www.google.com")
 driver.get("https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/american-express-platinum-corporate-card?inav=menu_cards_cs_corporate_platinum_card")
 
 elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2]//div[@class=\'title\']")
-print str(elem.text)
+print elem.text.encode("utf-8")
 print unicode(elem.text).encode("utf-8")
 
 print "[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=Special Characters Test"
