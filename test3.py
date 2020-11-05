@@ -40,7 +40,7 @@ elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2
 print elem.text.encode("utf-8")
 print unicode(elem.text).encode("utf-8")
 
-print "[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=Special Characters Test"
+print "Step[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=Special Characters Test"
 
 #driver.execute_script("sauce:job-result=passed")
 
