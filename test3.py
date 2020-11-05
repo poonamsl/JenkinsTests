@@ -25,6 +25,8 @@ caps = {
   'browserName': 'Chrome',
   'browserVersion': '80',
   'platformName': 'Windows 10',
+  'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
+  'name':'Special Characters Test',
 }
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
