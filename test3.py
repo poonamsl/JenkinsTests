@@ -26,7 +26,7 @@ caps = {
   'browserVersion': '80',
   'platformName': 'Windows 10',
   'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
-  'name':'Special Characters Test',
+  'name':'SpecialCharactersTest',
 }
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
@@ -42,7 +42,7 @@ elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2
 print elem.text.encode("utf-8")
 print unicode(elem.text).encode("utf-8")
 
-print "Step[0-2]SauceOnDemandSessionID=" + driver.session_id + " job-name=Special Characters Test"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=SpecialCharactersTest"
 
 #driver.execute_script("sauce:job-result=passed")
 
