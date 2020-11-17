@@ -25,8 +25,10 @@ caps = {
   'browserName': 'Chrome',
   'browserVersion': '80',
   'platformName': 'Windows 10',
-  'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
-  'name':'SpecialCharactersTest',
+  'sauce:options': {
+  	'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
+  	'name':'GoogleTest',
+  }
 }
 
 myUrl = 'http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub';
@@ -36,13 +38,8 @@ driver = webdriver.Remote (
 # This is your test logic. You can add multiple tests here.
 driver.get("https://www.google.com")
 
-driver.get("https://www.americanexpress.com/us/credit-cards/business/corporate-credit-cards/american-express-platinum-corporate-card?inav=menu_cards_cs_corporate_platinum_card")
 
-elem = driver.find_element_by_xpath("//div[@class=\'accordion corp-pdp\']//div[2]//div[@class=\'title\']")
-print elem.text.encode("utf-8")
-print unicode(elem.text).encode("utf-8")
-
-print "SauceOnDemandSessionID=" + driver.session_id + " job-name=SpecialCharactersTest"
+print "SauceOnDemandSessionID=" + driver.session_id + " job-name=GoogleTest"
 
 #driver.execute_script("sauce:job-result=passed")
 
