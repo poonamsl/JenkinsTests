@@ -26,7 +26,7 @@ caps = {
   'browserVersion': '80',
   'platformName': 'Windows 10',
   'sauce:options': {
-  	'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
+  	#'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
   	'name':'GoogleTest',
   }
 }
