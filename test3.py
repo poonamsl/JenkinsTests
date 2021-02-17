@@ -40,7 +40,7 @@ driver = webdriver.Remote (
 driver.get("https://www.google.com")
 
 
-print "SauceOnDemandSessionID=" + driver.session_id + " job-name=GoogleTest"
+#print "SauceOnDemandSessionID=" + driver.session_id + " job-name=GoogleTest"
 
 #driver.execute_script("sauce:job-result=passed")
 
