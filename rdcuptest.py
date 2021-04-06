@@ -9,7 +9,8 @@ caps = {
   'browserName': 'Chrome',
   'platformVersion': '10',
   'platformName': 'Android',
-  'name': 'Jenkins Test'
+  'name': 'Jenkins Test',
+  'build':os.environ.get('JENKINS_BUILD_NUMBER')
 }
 
 myUrl = 'https://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.us-west-1.saucelabs.com:443/wd/hub';
