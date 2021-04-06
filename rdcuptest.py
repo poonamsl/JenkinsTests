@@ -21,6 +21,7 @@ driver.get("https://www.google.com")
 
 session_url = driver.desired_capabilities['testobject_test_report_url']
 session_id = session_url.split("/")[4]
+print "SauceOnDemandSessionID=" + session_id
 print "SauceOnDemandSessionID=" + session_id + " job-name=Jenkins Test"
 
 driver.execute_script("sauce:job-result=passed")
