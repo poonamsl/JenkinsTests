@@ -28,6 +28,7 @@ caps = {
   'sauce:options': {
   	#'build':os.environ.get('SAUCE_TC_BUILDNUMBER'),
   	'name':'GoogleTest',
+	'tunnelIdentifier':os.environ.get('TUNNEL_IDENTIFIER'),
   }
 }
 
