@@ -30,6 +30,6 @@ jobStatus = "passed" if titleIsCorrect else "failed"
 driver.execute_script("sauce:job-result=" + jobStatus)
 
 print("SauceOnDemandSessionID=" + driver.session_id + " job-name=test1")
-print("SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS'))
+print(f"SauceOnDemandBrowsers={os.environ.get('SAUCE_ONDEMAND_BROWSERS')}")
 
 driver.quit()
