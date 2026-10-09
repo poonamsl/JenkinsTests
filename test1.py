@@ -12,10 +12,8 @@ options = ChromeOptions()
 options.browser_version = 'latest'
 options.platform_name = 'Windows 11'
 sauce_options = {}
-sauce_options['username'] = 'parora'
-sauce_options['accessKey'] = '*****e227'
-sauce_options['build'] = '<your build id>'
-sauce_options['name'] = '<your test name>'
+sauce_options['build'] = 'build1'
+sauce_options['name'] = 'JenkinsTest'
 options.set_capability('sauce:options', sauce_options)
 
 url = 'https://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:443/wd/hub';
