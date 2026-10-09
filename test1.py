@@ -21,13 +21,13 @@ options.set_capability('sauce:options', sauce_options)
 url = 'https://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:443/wd/hub';
 driver = webdriver.Remote(command_executor=url, options=options)
 
-driver.get("https://saucedemo.com");
-String title = driver.getTitle();
-boolean titleIsCorrect = title.contains("Swag Labs");
-String jobStatus = titleIsCorrect ? "passed" : "failed";
+driver.get("https://www.saucedemo.com")
+title = driver.title
+titleIsCorrect = "Swag Labs" in title
+jobStatus = "passed" if titleIsCorrect else "failed"
 
-// end the session
-driver.executeScript("sauce:job-result=" + jobStatus);
+# end the session
+driver.execute_script("sauce:job-result=" + jobStatus)
 
 print("SauceOnDemandSessionID=" + driver.session_id + " job-name=test1")
 print("SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS'))
