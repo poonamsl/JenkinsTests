@@ -21,21 +21,15 @@ options.set_capability('sauce:options', sauce_options)
 url = 'https://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:443/wd/hub';
 driver = webdriver.Remote(command_executor=url, options=options)
 
+driver.get("https://saucedemo.com");
+String title = driver.getTitle();
+boolean titleIsCorrect = title.contains("Swag Labs");
+String jobStatus = titleIsCorrect ? "passed" : "failed";
 
-# This is your test logic. You can add multiple tests here.
-driver.implicitly_wait(10)
-driver.get("http://www.google.com")
-if not "Google" in driver.title:
-	raise Exception("Unable to load google page!")
-	driver.execute_script("sauce:job-result=failed")
-	
-elem = driver.find_element_by_name("q")
-elem.send_keys("Sauce Labs")
-elem.submit()
+// end the session
+driver.executeScript("sauce:job-result=" + jobStatus);
 
 print("SauceOnDemandSessionID=" + driver.session_id + " job-name=test1")
 print("SauceOnDemandBrowsers=" + os.environ.get('SAUCE_ONDEMAND_BROWSERS'))
-
-driver.execute_script("sauce:job-result=passed")
 
 driver.quit()
